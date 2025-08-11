@@ -1,0 +1,16 @@
+{% extends 'layout.html' %}
+{% load static model_extras data_extras  %}
+{% load wagtailimages_tags wagtailcore_tags %}
+{% block title %} | Регистрация {% endblock title %}
+{% block content %}
+<div class="uk-container">
+<h1>Registration Success</h1>
+<progress class="uk-progress" value="100" max="100"></progress>
+      <div class="uk-margin">
+        Вы успешно зарегистрированы в Личном кабинете
+      </div>
+      <div class="uk-margin">
+        Вы можете изменить ваши данные в <a href="{% url 'get_profile' %}">Профиле</a>
+      </div>
+</div>
+{% endblock content %}

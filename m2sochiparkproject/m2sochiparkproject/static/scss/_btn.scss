@@ -1,0 +1,126 @@
+.btn {
+    color: #000;
+    background: none;
+    text-align: center;
+    letter-spacing: -1.08px;
+    text-transform: capitalize;
+    border-radius: 15px;
+    margin-top: 0;
+    padding: 0 30px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.6em;
+    transition: background-color .3s, color .3s;
+    outline: 0;
+    border: none;
+    cursor: pointer;
+
+    &.btn-small {
+        font-size: 14px;
+        padding: 6px 12px;
+        height: 40px;
+    }
+    &.btn-grey {
+        background: #ccc;
+        &:hover {
+            opacity: .8;
+        }
+    }
+
+    &.btn-icon {
+        span {
+            margin-right: 10px;
+            transform: scale(1.4);
+        }
+    }
+
+    &.telegram {
+        .uk-icon {
+            color: #24A1DE;
+        }
+    }
+    &.whatsapp {
+        .uk-icon {
+            color: #128C7E;
+        }
+    }
+    &.mail {
+        .uk-icon {
+            color: #4fc0b3;
+        }
+    }
+    &.receiver {
+        .uk-icon {
+            color: #042bb8;
+        }
+    }
+}
+
+.btn-primary {
+    background-color: $primaryColor;
+    color: #fff;
+
+    &:hover {
+        opacity: .8;
+    }
+}
+
+.btn-border {
+    border: 1px solid $primaryColor;
+}
+
+.btn-blue {
+    background-color: $primaryColor;
+    color: #fff;
+
+    // &:hover {
+    //     background-color: $textColorDark;
+    //     color: $primaryColor;
+    // }
+}
+
+.btn-black {
+    background-color: black;
+    color: white;
+    text-align: center;
+    letter-spacing: -1.08px;
+    text-transform: capitalize;
+    border-radius: 60px;
+    margin-top: 0;
+    padding: 13px 30px;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.6em;
+    transition: background-color .3s, color .3s;
+    display: inline-block;
+    outline: 0;
+
+    &:hover {
+        background-color: $primaryColor;
+        color: black;
+    }
+}
+
+.btn-with-image {
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    background-color: #fff;
+    border-radius: 60px;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 10px 10px 20px;
+    display: flex;
+    color: #000;
+    font-size: 20px;
+
+    img {
+        object-fit: cover;
+        border-radius: 70px;
+        width: 94px;
+        height: 47px;
+    }
+}

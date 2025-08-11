@@ -1,0 +1,51 @@
+{% extends 'layout.html' %}
+{% load static model_extras data_extras  %}
+{% load wagtailimages_tags wagtailcore_tags %}
+{% load widget_tweaks %}
+{% block title %} | Profile {% endblock title %} 
+
+{% block content %}
+<div class="uk-container">
+<nav aria-label="Breadcrumb">
+    <ul class="uk-breadcrumb">
+        <li><a href="{% url 'index' %}">Main</a></li>
+        <li><span aria-current="page">Profile</span></li>
+    </ul>
+</nav>
+<h1>Profile</h1>
+<form>    
+    <div class="uk-margin">
+    <input type="text" value="{{user.last_name}}" class="uk-input" disabled>
+    </div>
+    
+    <div class="uk-margin">
+    <input type="text" value="{{user.first_name}}" class="uk-input" disabled>
+    </div>
+    
+    <div class="uk-margin">
+    <input type="text" value="{{user.user_profile.middle_name}}" class="uk-input" disabled> 
+    </div>
+
+    <div class="uk-margin">
+    <input type="text" value="{{user.user_profile.company_name}}" class="uk-input" disabled> 
+    </div>
+
+    <div class="uk-margin">
+    <input type="text" value="{{user.user_profile.post}}" class="uk-input" disabled> 
+    </div>
+
+    <div class="uk-margin">
+    <input type="text" value="{{user.user_profile.city}}" class="uk-input" disabled> 
+    </div>
+
+    <div class="uk-margin">
+    <input type="text" value="{{user.email}}" class="uk-input" disabled> 
+    </div>
+
+    <div class="uk-margin">
+    <input type="text" value="{{user.phone}}" class="uk-input" disabled> 
+    </div>
+</form>
+ <a href="{% url 'edit_profile' %}" class="uk-button uk-button-default"><span class="uk-margin-right" uk-icon="pencil"></span> Редактировать</a>
+</div>
+{% endblock %}

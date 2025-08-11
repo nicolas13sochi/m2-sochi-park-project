@@ -1,0 +1,48 @@
+.features {
+   
+
+    @media (min-width: 993px) {
+        display: flex;
+        gap: 40px;
+        align-items: center;
+    }
+
+    .feature-items {
+        padding-top: 30px;
+        .item {
+            background-color: white;
+            grid-column-gap: 15px;
+            grid-row-gap: 15px;
+            border-radius: 20px;
+            padding: 10px 60px 10px 10px;
+            display: flex;
+            &:not(:first-child) {
+                margin-top: 15px;
+            }
+        }
+    }
+    .content,
+    .slider {
+        @media (min-width: 993px) {
+            width: 50%;
+        }
+    }
+    .slider {
+            min-height: 200px;
+            max-height: 300px;
+            @media (min-width: 993px) {
+                min-height: auto;
+                max-height: 100%;
+            }
+        img {
+            border-radius: 10px;
+
+        }
+        .uk-slideshow-items {
+            @media (max-width: 992px) {
+                min-height: 100%!important;
+                height: 100%!important;
+            }
+        }
+    }
+}

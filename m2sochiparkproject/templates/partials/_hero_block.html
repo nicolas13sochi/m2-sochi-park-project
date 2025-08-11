@@ -1,0 +1,55 @@
+{% load static model_extras data_extras %}
+{% load wagtailimages_tags wagtailcore_tags %}
+{% load widget_tweaks %}
+
+<section class="hero" style="background: #ccc;">
+  <div class="hero-img-wrap">
+    <picture class="">
+        <!-- Десктоп (от 768px) -->
+        <source 
+            media="(min-width: 768px)" 
+            srcset="{% static 'img/sp/hero.webp' %}" 
+            >
+            
+            <!-- Телефон (до 768px) -->
+            <img 
+            src="{% static 'img/sp/hero-mobile.webp' %}" 
+            alt="Фото здания" 
+            loading="lazy" 
+            width="1200" 
+            height="600"
+            class="hero-img"
+        >
+    </picture>
+  </div>
+
+  <div class="hero-content">
+    <div class="w-container base-container">
+      <p class="hero-subtitle">Жилой комплекс</p>
+      <h1 class="hero-title">Сочи Парк</h1>
+      <a href="#" id="catalogHero" style="scroll-margin-top: 80px;"></a>
+      <div class="hero-block">
+        <div class="left">
+          <div class="item">
+            <div class="icon">
+              <img src="https://static.tildacdn.com/tild3339-3334-4630-b839-386364363664/House.svg" alt="">
+            </div>
+            <div class="text">
+                <strong>Ипотека 5% </strong><br>Первоначальный <br> взнос 20% 
+            </div>
+          </div>
+          <div class="item">
+            <div class="icon">
+              <img src="https://static.tildacdn.com/tild3237-3437-4866-a239-656430626562/size.svg" alt="">
+            </div>
+            <div class="text">Квартиры площадью <br> от 15 до 65 кв.м.,<br> стоимостью<br>  <strong>от 6.5 млн руб.</strong></div>
+          </div>
+        </div>
+        <div class="right">
+          <div class="btn btn-primary" uk-toggle="target: #getCatalog">Получить каталог</div>
+          <div class="btn btn-border" uk-toggle="target: #modal-video">Видео презентация</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

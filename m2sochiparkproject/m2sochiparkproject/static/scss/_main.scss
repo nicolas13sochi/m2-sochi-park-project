@@ -1,0 +1,154 @@
+body {
+    font-family: "Manrope", sans-serif;
+    font-size: 1rem;
+    line-height: 1.6em;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.main-cont {
+  flex: 1;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Manrope", sans-serif;
+  font-weight: 600;
+}
+
+.w-container {
+    max-width: 940px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.base-container {
+    flex-direction: column;
+    align-items: center;
+    max-width: 1260px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    @media (min-width: 993px) {
+        padding-top: 90px;
+        padding-bottom: 90px;
+    }
+}
+
+.devider {
+    height: 18rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    div {
+        width: 300px;
+        height: 1px;
+        background: #eee;
+    }
+}
+
+
+.map-container {
+    position: relative;
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+
+  .map-image {
+    width: 100%;
+    display: block;
+  }
+
+  .map-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+  }
+
+  .house {
+    stroke-width: 3;
+    stroke: #fff;
+    fill: transparent;
+  }
+
+  .built {
+    fill: rgba(0, 200, 0, 0.3);
+    stroke: #00cc00;
+  }
+
+  .under-construction {
+    fill: rgba(255, 215, 0, 0.25);
+    stroke: #ffcc00;
+  }
+
+  .pin {
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background-color: #003366;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 28px;
+    transform: translate(-50%, -50%);
+    pointer-events: auto; /* можно кликать */
+    box-shadow: 0 0 0 2px #fff;
+    z-index: 10;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .cookie {
+    position: fixed;
+    right: 20px;
+    bottom: 30px;
+    left: 20px;
+    z-index: 9999;
+    display: flex;
+    gap: 54px;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 16px;
+    margin: 0 auto;
+
+    border-radius: 16px;
+    font-size: 11px;
+    color: #000;
+    background: #fff;
+    border: 1px solid #000;
+
+    @media (min-width: 993px) {
+        width: 634px;
+        left: 0;
+        right: 0;
+    }
+}
+
+.lightbox-map {
+  img {
+    width: 100%;
+  }
+}
+
+
+
+
+

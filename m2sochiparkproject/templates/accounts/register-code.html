@@ -1,0 +1,41 @@
+{% extends 'layout.html' %}
+{% load static model_extras data_extras  %}
+{% load wagtailimages_tags wagtailcore_tags %}
+{% load widget_tweaks %}
+{% block title %} | Регистрация код {% endblock title %}
+
+{% block content %}
+<div class="uk-container">
+<h1>Registration Code</h1>
+<progress class="uk-progress" value="66" max="100"></progress>
+    <form method="POST" action="{% url 'register' %}" class="">
+        {% csrf_token %}
+        {{ wizard.management_form }}
+        <div>
+          Код отправлен на указанный email: {{email}}
+        </div>
+        
+          {% for field in form %}
+            <div class="uk-margin">
+                {% render_field field class="uk-input" placeholder=field.label id=label_id %}
+            </div>
+            {% if field.errors %}
+            <div class="error-text">{{ field.errors }}</div>
+            {% endif %}
+            {% if field.help_text %}
+            <small class="form-text text-muted">{{ field.help_text }}</small>
+            {% endif %}
+          {% endfor %}
+
+          <button type="submit" class="uk-button uk-button-primary">
+              Отправить
+          </button>
+
+          <div class="uk-margin" id="resend-reg-code">
+          {% include 'accounts/partials/_resend-reg-code.html' %}
+          </div>
+
+          <div class="uk-margin">Нажимая кнопку Продолжить, вы даете <a href="{% url 'personal_data' %}" target="_blank">Согласие на обработку персональных данных,</a> и принимаете <a href="{% url 'confidential' %}" target="_blank">Политику конфеденциальности.</a> </div>
+      </form>
+</div>
+{% endblock content %}

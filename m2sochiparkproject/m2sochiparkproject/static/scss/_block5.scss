@@ -1,0 +1,88 @@
+.block5 {
+    position: relative;
+    padding: 6rem 0;
+    .block-title {
+        font-size: 10rem;
+        position: absolute;
+        z-index: -1;
+        opacity: .014;
+        left: 0;
+        right: 0;
+        width: 3000px;
+        top: 20%;
+    }
+    .block {
+        display: grid;
+        grid-gap: 20px;
+        grid-template-columns: 1fr 1fr;
+
+        a {
+            display: block;
+        }
+    }
+    .lightbox-inner {
+        img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 2fr; /* третья строка в 2 раза выше */
+        gap: 3px;
+        background: #000;
+    }
+
+    .item {
+        background-color: #cfcfcf;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
+        font-weight: bold;
+        border-radius: 8px;
+    }
+    .item5 {
+        grid-column: 1 / 3; /* на всю ширину */
+        grid-row: 3 / 4;    /* только третья строка */
+        background-color: #999;
+    }
+
+    .right {
+        // padding-top: 2rem;
+        padding-left: 4rem;
+        .title {
+            padding-bottom: 2rem;
+            font-weight: 500;
+        }
+        .btn {
+            margin-top: 4rem;
+        }
+    }
+    .list {
+        font-size: 1.2rem;
+        font-weight: 200;
+
+        & > div {
+            padding-left: 20px;
+            padding-top: 1.5rem;
+            position: relative;
+            &:before {
+                content: "\2022";
+                display: inline-block;
+                position: absolute;
+                left: 0;
+                top: 1.5rem;
+            }
+        }
+    }
+    p {
+        padding-top: 20px;
+        font-size: 1.2rem;
+        font-weight: 200; 
+    }
+}

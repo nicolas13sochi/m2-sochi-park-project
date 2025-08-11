@@ -1,0 +1,41 @@
+{% load static model_extras data_extras  %}
+{% load wagtailimages_tags wagtailcore_tags %}
+<button
+    id="resend-button"
+    class="uk-button uk-button-secondary"
+    hx-post="{% url 'resend_otp_auth_code' %}"
+    hx-trigger="click"
+    hx-target="#resend-auth-code"
+    hx-swap="innerHTML"
+    >
+    Отправить код повторно&nbsp;<span id="resend-timer" class="text-muted ms-2">
+    {% if otp.delta_resend %}
+    {{otp.delta_resend}} сек
+    {% endif %}
+    </span>
+</button>
+<div id="resend-result" class="mt-1"></div>
+{% if otp.delta_resend > 0 %}
+<script>
+    function startTimerOne() {
+        const resendButton = document.querySelector('#resend-button');
+        const countdownElement = document.querySelector('#resend-timer');
+        let cooldown_one = {{otp.delta_resend}}; // секунд
+        resendButton.disabled = true;
+        countdownElement.textContent = `(${cooldown_one} сек)`;
+
+        const interval = setInterval(() => {
+            cooldown_one--;
+            countdownElement.textContent = `(${cooldown_one} сек)`;
+
+            if (cooldown_one <= 0) {
+                clearInterval(interval);
+                resendButton.disabled = false;
+                countdownElement.textContent = '';
+                cooldown_one = {{otp.delta_resend}};
+            }
+        }, 1000);
+    }
+    startTimerOne({{otp.delta_resend}});
+</script>
+{% endif %}

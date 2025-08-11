@@ -1,0 +1,509 @@
+{% load static model_extras data_extras %}
+{% load wagtailimages_tags wagtailcore_tags %}
+{% load widget_tweaks %}
+ 
+
+
+    <div class="block3" id="plans">
+        <a href="#" id="apartmentPlan" style="scroll-margin-top: 80px;"></a>
+        <div class="w-container base-container">
+            <h2 class="block-title">Предложения по новостройкам</h2>
+            <div class="uk-position-relative uk-visible-toggle" tabindex="-1" uk-slider>
+                <div class="uk-slider-items uk-child-width-1-2@s uk-child-width-1-3@m uk-grid">
+                    <div 
+                        uk-toggle="target: #getAparmentPlan"
+                        data-block-id="apartmentPlan"
+                        data-form-name="Квартиры студии от 15,7 до 18,3 м²"
+                    >
+                        <div class="uk-card">
+                            <div class="card-img">
+                                <div class="img-main">
+                                    <img src="{% static 'img/sp/plans/18-3.webp' %}" width="383" height="383" alt="Студии от 15,7 до 18,3 м²" loading="lazy" decoding="async">
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="uk-card-title">Квартиры студии</h3>
+                                <p>от 15,7 до 18,3 м²</p>
+                                <div class="btns">
+                                    <button class="btn btn-blue" >Подробнее</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div 
+                        uk-toggle="target: #getAparmentPlan"
+                        data-block-id="apartmentPlan"
+                        data-form-name="Квартиры студии от 20,1 до 24,1 м²"
+                    >
+                        <div class="uk-card">
+                            <div class="card-img">
+                                <div class="img-main">
+                                    <img src="{% static 'img/sp/plans/24-1.webp' %}" width="383" height="383" alt="Студии от 20,1 до 24,1 м²" loading="lazy" decoding="async">
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="uk-card-title">Квартиры студии</h3>
+                                <p>от 20,1 до 24,1 м²</p>
+                                <div class="btns">
+                                    <button class="btn btn-blue" >Подробнее</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div 
+                        uk-toggle="target: #getAparmentPlan"
+                        data-block-id="apartmentPlan"
+                        data-form-name="Однокомнатная квартира от 25,2 до 25,8 м²"
+                    >
+                        <div class="uk-card">
+                            <div class="card-img">
+                                <div class="img-main">
+                                    <img src="{% static 'img/sp/plans/25-8.webp' %}" width="383" height="383" alt="Однокомнатные квартиры от 25,2 до 25,8 м²" loading="lazy" decoding="async">
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="uk-card-title">Однокомнатные квартиры</h3>
+                                <p>от 25,2 до 25,8 м²</p>
+                                <div class="btns">
+                                    <button class="btn btn-blue" >Подробнее</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div 
+                        uk-toggle="target: #getAparmentPlan"
+                        data-block-id="apartmentPlan"
+                        data-form-name="Однокомнатная квартира 38,2"
+                    >
+                        <div class="uk-card">
+                            <div class="card-img">
+                                <div class="img-main">
+                                    <img src="{% static 'img/sp/plans/38-2.webp' %}" width="383" height="383" alt="Однокомнатная квартира 38,2" loading="lazy" decoding="async">
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="uk-card-title">Однокомнатная квартира</h3>
+                                <p>38,2 м² </p>
+                                <div class="btns">
+                                    <button class="btn btn-blue" >Подробнее</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div 
+                        uk-toggle="target: #getAparmentPlan"
+                        data-block-id="apartmentPlan"
+                        data-form-name="Двухкомнатная квартира 37,9"
+                    >
+                        <div class="uk-card">
+                            <div class="card-img">
+                                <div class="img-main">
+                                    <img src="{% static 'img/sp/plans/37-9.webp' %}" width="383" height="383" alt="Двухкомнатная квартира 37,9" loading="lazy" decoding="async">
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="uk-card-title">Двухкомнатная квартира</h3>
+                                <p>37,9 м² </p>
+                                <div class="btns">
+                                    <button class="btn btn-blue" >Подробнее</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div 
+                        uk-toggle="target: #getAparmentPlan"
+                        data-block-id="apartmentPlan"
+                        data-form-name="Двухкомнатная квартира 43,3"
+                    >
+                        <div class="uk-card">
+                            <div class="card-img">
+                                <div class="img-main">
+                                    <img src="{% static 'img/sp/plans/43-3.webp' %}" width="383" height="383" alt="Двухкомнатная квартира 43,3" loading="lazy" decoding="async">
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="uk-card-title">Двухкомнатная квартира</h3>
+                                <p>43,3 м² </p>
+                                <div class="btns">
+                                    <button class="btn btn-blue" >Подробнее</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div 
+                        uk-toggle="target: #getAparmentPlan"
+                        data-block-id="apartmentPlan"
+                        data-form-name="Двухкомнатная квартира 45,3"
+                    >
+                        <div class="uk-card">
+                            <div class="card-img">
+                                <div class="img-main">
+                                    <img src="{% static 'img/sp/plans/45-3.webp' %}" width="383" height="383" alt="Двухкомнатная квартира 45,3" loading="lazy" decoding="async">
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="uk-card-title">Двухкомнатная квартира</h3>
+                                <p>45,3 м² </p>
+                                <div class="btns">
+                                    <button class="btn btn-blue" >Подробнее</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div 
+                        uk-toggle="target: #getAparmentPlan"
+                        data-block-id="apartmentPlan"
+                        data-form-name="Трехкомнатная квартира 64,49"
+                    >
+                        <div class="uk-card">
+                            <div class="card-img">
+                                <div class="img-main">
+                                    <img src="{% static 'img/sp/plans/64-4.webp' %}" width="383" height="383" alt="Трехкомнатная квартиры от 64,49 м²" loading="lazy" decoding="async">
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="uk-card-title">Трехкомнатная квартира</h3>
+                                <p>64,49 м²</p>
+                                <div class="btns">
+                                    <button class="btn btn-blue" >Подробнее</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="slider-nav">
+                    <a class="" href uk-slidenav-previous1 uk-slider-item="previous">
+                        <span uk-icon="arrow-left"></span>
+                    </a>
+                    <a class="" href uk-slidenav-next1 uk-slider-item="next">
+                        <span uk-icon="arrow-right"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="block14">
+        <div class="w-container base-container">
+            <div class="grid">
+                <div class="left">
+                    <h2 class="block-title">Ипотека</h2>
+                    <p class="subtext">Мы обеспечим быстрое и комфортное оформление ипотеки, чтобы вы могли стать счастливым обладателем квартиры в ЖК «Сочи Парк».</p>
+                    <div class="tiles">
+                        <div class="item">
+                            <div class="hight">от 5%</div>
+                            <div class="text">Процентная ставка</div>
+                        </div>
+                        <div class="item">
+                            <div class="hight">20%</div>
+                            <div class="text">Первоначальный взнос</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="right">
+                    <img src="{% static 'img/sp/family.webp' %}" width="560" height="365" alt="Процентная ставка от 5%" loading="lazy" decoding="async">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="block15">
+        <div class="w-container base-container">
+            <h2 class="block-title">Вы можете рассчитать ипотеку в банке партнере</h2>
+            <div class="banks">
+                <a href="http://www.sberbank.ru/ru/person/credits/home/family" class="" target="_blank">
+                    <img src="{% static 'img/banks/sber.webp' %}" width="312" height="175" alt="Логотип Сбербанк" loading="lazy" decoding="async">
+                </a>
+                <a href="https://alfabank.ru/get-money/mortgage/ipotechnyj-kalkulyator/" class="" target="_blank">
+                    <img src="{% static 'img/banks/alpha.webp' %}" width="312" height="175" alt="Логотип Альфабанк" loading="lazy" decoding="async">
+                </a>
+                <a href="https://www.vtb.ru/personal/ipoteka/ipotechnyj-kalkulyator/" class="" target="_blank">
+                    <img src="{% static 'img/banks/vtb.webp' %}" width="312" height="175" alt="Логотип ВТБ" loading="lazy" decoding="async">
+                </a>
+                <a href="https://sovcombank.ru/credits/ipoteka/ipoteka-s-gospodderzhkoi-dlya-semei-s-detmi?utm_referrer=https%3A%2F%2Fwww.google.com%2F" class="" target="_blank">
+                    <img src="{% static 'img/banks/sovkom.webp' %}" width="312" height="175" alt="Логотип Совкомбанк" loading="lazy" decoding="async">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="block16" id="">
+        <div class="w-container base-container">
+            <div class="grid">
+                <div class="left">
+                    <h2 class="title">Купите квартиру<br> в ипотеку от 5%</h2>
+                    <p class="text">Наши специалисты помогут вам собрать документы и подать заявку в кратчайшие сроки</p>
+                    <div class="citate">
+                        <sub>“</sub><span>Нам одобряют более 93% заявок, узнайте предварительное решение уже сегодня</span>
+                    </div>
+                  
+                </div>
+                <div class="right">
+                    <form action="{% url 'create_lead' %}" class="s-form" method="POST">
+                        {% csrf_token %}
+                        <input name="block_id" type="text" value="anyOtherQuestions" hidden/>
+                        <input name="form_name" type="text" value="Остались вопросы или хотите обсудить условия покупки квартиры" hidden/>
+                        <div class="fields">
+                            <div class="">
+                                <div class="field-label">Вас зовут?</div>
+                                <div class="uk-inline">
+                                    <span class="uk-form-icon" uk-icon="icon: user"></span>
+                                    <input name="first_name" class="uk-input" type="text"  placeholder="Вас зовут" required>
+                                </div>
+                            </div>
+                            <div class="">
+                                <div class="field-label">Ваш телефон:</div>
+                                <div class="uk-inline">
+                                    <span class="uk-form-icon" uk-icon="icon: receiver"></span>
+                                    <input name="phone" class="uk-input phone-mask" type="text" aria-label="Not clickable icon" autocomplete="off" id="phone-block-11" placeholder="+7 (999) 999-99-99" required>
+                                </div>
+                            </div>
+                            <div>
+                                <label for="privacy1" class="checkbox">
+                                    <input id="privacy1" type="checkbox" required>
+                                    <div class="labeltext">Я согласен(-на) с политикой конфиденциальности об обработке персональных данных</div>
+                                </label>
+                                <button class="btn btn-primary">Отправить</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div uk-lightbox class="lightbox-map">
+        <a href="{% static 'img/sp/map.webp' %}">
+            <img src="{% static 'img/sp/map.webp' %}" width="" alt="Карта застройки" loading="lazy" decoding="async">
+        </a>
+    </div>
+
+    <div class="block17" id="infrastructure">
+        <div class="w-container base-container">
+            <div class="head">
+                <h2 class="block-title">Преимущества <br> и инфраструктура</h2>
+                <p>Идеальное сочетание эстетики и функциональности позволяет ощутить новую форму свободы</p>
+            </div>
+            <div class="cards">
+                <div class="item">
+                    <img src="{% static 'img/sp/cards/1.webp' %}" width="" alt="Фото объекта" loading="lazy" decoding="async">
+                    <div class="card-title">Видовые характеристики всех квартир</div>
+                    <div class="text">Витражное, панорамное остекление в каждой из квартир позволит в полной мере оценить виды на море, город и горы Кавказского хребта в сторону Красной Поляны — пейзажи станут своеобразным «продолжением интерьера».</div>
+                </div>
+                <div class="item">
+                    <img src="{% static 'img/sp/cards/2.webp' %}" width="" alt="Фото школы" loading="lazy" decoding="async">
+                    <div class="card-title">Школа 1100 мест на территории комплекса</div>
+                    <div class="text">В непосредственной близости от комплекса будут построены новая школа на 1100 мест и детский сад на 300 мест. Ваши дети смогут самостоятельно ходить в школу, и вам не нужно будет переживать, как они доберутся издалека.</div>
+                </div>
+                <div class="item">
+                    <img src="{% static 'img/sp/cards/3.webp' %}" width="" alt="Фото школы" loading="lazy" decoding="async">
+                    <div class="card-title">Новый парк 4,5 Га</div>
+                    <div class="text">Чтобы провести время на природе, вам не понадобится выбираться за город. Вблизи жилого комплекса «Сочи Парк» будет расположен большой городской эко парк с зонами отдыха, спортивными и игровыми площадками. Там можно будет гулять с детьми, совершать утренние пробежки и просто отдыхать вдали от городской суеты.</div>
+                </div>
+                <div class="item">
+                    <img src="{% static 'img/sp/cards/4.webp' %}" width="" alt="Фото школы" loading="lazy" decoding="async">
+                    <div class="card-title">Детский сад на территории комплекса</div>
+                    <div class="text">На территории комплекса за собственные средства будет построена новая школа на 1100 мест и детский сад на 300 мест. Ваши дети смогут самостоятельно ходить в школу, и вам не нужно будет переживать, как они доберутся издалека.</div>
+                </div>
+                <div class="item">
+                    <img src="{% static 'img/sp/cards/5.webp' %}" width="" alt="Фото школы" loading="lazy" decoding="async">
+                    <div class="card-title">Развитая инфраструктура комплекса</div>
+                    <div class="text">Микрорайон Бытха считается одним из самых зеленых и экологичных в Сочи это по праву лучшая локация для воплощения стремлений к новому и реализации всех ваших пожеланий.</div>
+                </div>
+                <div class="item">
+                    <img src="{% static 'img/sp/cards/6.webp' %}" width="" alt="Фото школы" loading="lazy" decoding="async">
+                    <div class="card-title">Продуманные планировки</div>
+                    <div class="text">Проектировщики ИСК «Еврострой» знают толк в эргономичном использовании каждого квадратного метра. Планировки продуманы таким образом, чтобы можно было подобрать квартиру как для отдыха, приезжая в Сочи несколько раз в год, так и для постоянного проживания. Много комнат правильной прямоугольной формы с большим количеством естественного света.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="block8 ">
+        <div class="grid-container" uk-lightbox>
+            <a href="{% static 'img/sp/gallery/1.webp' %}" class="grid-item">
+                <img src="{% static 'img/sp/gallery/1.webp' %}" alt="">
+            </a>
+            <a href="{% static 'img/sp/gallery/2.webp' %}" class="grid-item">
+                <img src="{% static 'img/sp/gallery/2.webp' %}" alt="">
+            </a>
+            <a href="{% static 'img/sp/gallery/3.webp' %}" class="grid-item">
+                <img src="{% static 'img/sp/gallery/3.webp' %}" alt="">
+            </a>
+            <a href="{% static 'img/sp/gallery/4.webp' %}" class="grid-item">
+                <img src="{% static 'img/sp/gallery/4.webp' %}" alt="">
+            </a>
+            <a href="{% static 'img/sp/gallery/5.webp' %}" class="grid-item">
+                <img src="{% static 'img/sp/gallery/5.webp' %}" alt="">
+            </a>
+            <a href="{% static 'img/sp/gallery/6.webp' %}" class="grid-item">
+                <img src="{% static 'img/sp/gallery/6.webp' %}" alt="">
+            </a>
+            <a href="{% static 'img/sp/gallery/7.webp' %}" class="grid-item">
+                <img src="{% static 'img/sp/gallery/7.webp' %}" alt="">
+            </a>
+            <a href="{% static 'img/sp/gallery/8.webp' %}" class="grid-item">
+                <img src="{% static 'img/sp/gallery/8.webp' %}" alt="">
+            </a>
+        </div>
+
+        <div class="form-wr">
+            <a href="#" id="signUpForGuidedTour" style="scroll-margin-top: 80px;"></a>
+            <div class="w-container base-container">
+                <form action="{% url 'create_lead' %}" method="POST" class="s-form">
+                    {% csrf_token %}
+                    <input name="block_id" type="text" value="signUpForGuidedTour" hidden/>
+                    <input name="form_name" type="text" value="Тематический эко парк" hidden/>
+                    <h2 class="uk-modal-title mb-3">Запишитесь на экскурсию</h2>
+                    <p class="subtext">Наши специалисты познакомят вас с комплексом и ответят на все ваши вопросы</p>
+                    <div class="fields">
+                        <div class="">
+                            <div class="field-label">Вас зовут?</div>
+                            <div class="uk-inline">
+                                <span class="uk-form-icon" uk-icon="icon: user"></span>
+                                <input name="first_name" class="uk-input" type="text"  placeholder="Вас зовут" required>
+                            </div>
+                        </div>
+                        <div class="">
+                            <div class="field-label">Ваш телефон:</div>
+                            <div class="uk-inline">
+                                <span class="uk-form-icon" uk-icon="icon: receiver"></span>
+                                <input name="phone" class="uk-input phone-mask" type="text" aria-label="Not clickable icon" autocomplete="off" id="phone-block-8" placeholder="+7 (999) 999-99-99" required>
+                            </div>
+                        </div>
+                        <div class="btns">
+                            <button class="btn btn-primary" >Отправить заявку</button>
+                        </div>
+                    </div>
+                    <div class="policy">Нажимая кнопку “оставить заявку” вы соглашаетесь с политикой конфиденциальности</div>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <div class="block9" id="">
+        <a href="#" id="trustManagementBlock" style="scroll-margin-top: 80px;"></a>
+        <div class="w-container base-container">
+            
+            <div class="grid">
+                <div class="left">
+                    <h2 class="title">Доверительное управление</h2>
+                    <p class="text">Мы рады предложить вам профессиональное доверительное управление вашей квартирой, которое обеспечит вам свободное время, стабильный доход, и уверенность в сохранности вашего имущества.</p>
+                    <div class="list">
+                        <div class="item">
+                            <div class="icon">
+                                <span uk-icon="check"></span>
+                            </div>
+                            <div class="list-text">
+                                <h6>Пассивный доход</h6>
+                                <p>Собственник получает стабильный пассивный доход, с минимальным вложением своего времени.</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="icon">
+                                <span uk-icon="check"></span>
+                            </div>
+                            <div class="list-text">
+                                <h6>Аренда</h6>
+                                <p>Анализ рыночной стоимости объекта в качестве консультации. (краткосрочная и долгосрочная аренда)</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="icon">
+                                <span uk-icon="check"></span>
+                            </div>
+                            <div class="list-text">
+                                <h6>Управление</h6>
+                                <p>Мы берем на себя ответственность: за размещение рекламы, поиск жильцов, показы, клининг, техническое обслуживание квартиры и т.д.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="">
+                        <button class="btn btn-primary" uk-toggle="target: #trustManagement">Оставить заявку</button>
+                    </div>
+                    <div class="img">
+                        <img src="{% static 'img/4898.jpg' %}" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="block10">
+        <a href="#" id="downloadDocumentsBlock" style="scroll-margin-top: 80px;"></a>
+        <div class="w-container base-container">
+            <div class="grid">
+                <div class="left">
+                    <h2 class="title">Разрешительные документы</h2>
+                    <button class="btn btn-primary" uk-toggle="target: #downloadDocuments">Скачать документы</button>
+                </div>
+                <div class="right">
+                    <img src="{% static 'img/sp/docs.webp' %}" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="block11" id="contacts">
+        <a href="#" id="anyOtherQuestions" style="scroll-margin-top: 80px;"></a>
+        <div class="w-container base-container">
+            <div class="grid">
+                <div class="left">
+                    <h2 class="title">Остались вопросы или хотите обсудить условия покупки квартиры?</h2>
+                    <p class="text">Оставьте контакты, наш менеджер свяжется с вами в ближайшее время</p>
+                    <div class="location">
+                        <div class="t">Наш адрес:</div>
+                        <div class="adress">Сочи, Ясногорская улица, 16/8к1</div>
+                    </div>
+                    <div class="btns">
+                        <a href="https://t.me/k0nstantin_vladimirovi4" class="btn btn-grey btn-icon telegram"><span uk-icon="telegram"></span> Связаться в Telegram</a>
+                        <a href="https://wa.me/79186106070" class="btn btn-grey btn-icon whatsapp"><span uk-icon="whatsapp"></span> Связаться в WhatsApp</a>
+                        <a href="mailto:6106070@mail.ru" class="btn btn-grey btn-icon mail"><span uk-icon="mail"></span> Связаться по эл. почте</a>
+                        <a href="https://sochipark-sochi.ru/tel:89186106070" class="btn btn-grey btn-icon receiver"><span uk-icon="receiver"></span> Связаться по телефону</a>
+                    </div>
+                </div>
+                <div class="right">
+                    <form action="{% url 'create_lead' %}" class="s-form" method="POST">
+                        {% csrf_token %}
+                        <input name="block_id" type="text" value="anyOtherQuestions" hidden/>
+                        <input name="form_name" type="text" value="Остались вопросы или хотите обсудить условия покупки квартиры" hidden/>
+                        <div class="fields">
+                            <div class="">
+                                <div class="field-label">Вас зовут?</div>
+                                <div class="uk-inline">
+                                    <span class="uk-form-icon" uk-icon="icon: user"></span>
+                                    <input name="first_name" class="uk-input" type="text"  placeholder="Вас зовут" required>
+                                </div>
+                            </div>
+                            <div class="">
+                                <div class="field-label">Ваш телефон:</div>
+                                <div class="uk-inline">
+                                    <span class="uk-form-icon" uk-icon="icon: receiver"></span>
+                                    <input name="phone" class="uk-input phone-mask" type="text" aria-label="Not clickable icon" autocomplete="off" id="phone-block-11" placeholder="+7 (999) 999-99-99" required>
+                                </div>
+                            </div>
+                            <div class="">
+                                <div class="field-label">Ваш вопрос:</div>
+                                <div class="uk-inline">
+                                    <textarea class="uk-textarea" name="text" id=""></textarea>
+                                </div>
+                            </div>
+                            <div>
+                                <label for="privacy1" class="checkbox">
+                                    <input id="privacy1" type="checkbox" required>
+                                    <div class="labeltext">Я согласен(-на) с политикой конфиденциальности об обработке персональных данных</div>
+                                </label>
+                                <button class="btn btn-primary">Отправить</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>

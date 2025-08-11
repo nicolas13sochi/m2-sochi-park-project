@@ -1,0 +1,61 @@
+.block16 {
+
+    .grid {
+        padding: 1rem 0 3rem;
+        display: grid;
+        grid-gap: 2rem;
+        border-radius: 20px;
+        @media (min-width: 768px) {
+            padding: 3rem 2rem 6rem;
+            grid-template-columns: 1.3fr 1fr;
+            grid-gap: 8rem;
+        }
+    }
+    .title {
+        padding-bottom: 1rem;
+        font-size: 2rem;
+        @media (min-width: 768px) {
+            font-size: 3rem;
+        }
+    }
+    .text {
+        font-size: 1rem;
+        margin: 0;
+        opacity: .6;
+        @media (min-width: 768px) {
+            font-size: 1.4rem;
+        }
+    }
+    .citate {
+        margin-top: 3rem;
+        background: $primaryColor;
+        color: #fff;
+        font-size: 20px;
+        padding: 1.5rem 2rem;
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @media (min-width: 768px) {
+            padding: 1.5rem 4rem;
+        }
+        sub {
+            border: 0;
+            font-size: 60px;
+            top: 0;
+            left: -20px;
+        }
+    }
+ 
+
+    .right {
+        .s-form {
+            padding-top: 0;
+        }
+        .fields {
+            display: grid;
+            gap: 2rem;
+        }
+    }
+}
+

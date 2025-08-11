@@ -1,0 +1,37 @@
+{% load static model_extras  data_extras %}
+{% load wagtailimages_tags wagtailcore_tags %}
+{% load widget_tweaks %}
+
+<div class="block1" style="display: none;">
+        <div class="w-container base-container">
+            <h6>о комплексе</h6>
+            <h2>Стиль Belle Époque у моря</h2>
+            <p><strong>Marine Garden Sochi</strong> — роскошный жилой комплекс и отель в неоклассическом стиле. Архитекторы переосмыслили античную эстетику, объединив белоснежный мрамор и классические формы. Лаконичные, торжественные фасады подчеркивают статус, а полукруглые балконы и панорамные виды на море создают атмосферу исключительности.</p>
+        </div>
+    </div>
+
+    <div class="block2" style="display: none;">
+        <div class="grid-container base-container" uk-lightbox>
+            <div class="left">
+                  <a  href="img/img3.webp">
+                    <img src="{% static 'img/img3.webp' %}" width="1800" height="1200" alt="">
+                </a>
+                <a  href="img/img2.webp">
+                    <img src="{% static 'img/img2.webp' %}" width="1800" height="1200" alt="">
+                </a>
+            </div>
+            <div class="right">
+                <a  href="img/img1.jpg">
+                    <img src="{% static 'img/img1.jpg' %}" width="1800" height="1200" alt="">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="block4" style="display: none;">
+        <div class="w-container base-container">
+            <div class="block">
+                <h3>Предлагаем <strong>беспроцентную</strong> рассрочку до завершения строительства. Продажа апартаментов и квартир в Marine Garden Sochi осуществляется через эскроу-счет. <strong><a href="">Свяжитесь</a></strong> с нами — предоставим индивидуальную консультацию и полную информацию.</h3>
+            </div>
+        </div>
+    </div>

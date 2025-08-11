@@ -1,0 +1,32 @@
+{% extends 'layout.html' %}
+{% load static model_extras data_extras  %}
+{% load wagtailimages_tags wagtailcore_tags %}
+{% load widget_tweaks %}
+{% block title %} | Авторизация {% endblock title %}
+
+{% block content %}
+<div class="uk-container">
+<h1>Sign-in</h1>
+<progress class="uk-progress" value="50" max="100"></progress>
+<form method="POST" action="{% url 'login' %}" class="">
+  {% csrf_token %}
+  {{ wizard.management_form }}
+  <div class="uk-margin">
+    {% for field in form %}
+        {% render_field field class="uk-input" placeholder="Email" id=field.id_for_label %}
+        {% if field.errors %}
+        <div class="error-text">{{ field.errors }}</div>
+        {% endif %}
+    {% endfor %}
+  </div>
+
+    <button type="submit" class="uk-button uk-button-primary">
+        Продолжить
+    </button>
+
+  <div class="uk-margin">Нажимая кнопку Продолжить, вы даете <a href="{% url 'personal_data' %}" target="_blank">Согласие на обработку персональных данных,</a> и принимаете <a href="{% url 'confidential' %}" target="_blank">Политику конфеденциальности.</a> </div>
+  <div class="uk-margin">или</div>
+  <a href="{% url 'register' %}" class="uk-button uk-button-default">Зарегистрироваться</a>
+</form>
+</div>
+{% endblock content %}

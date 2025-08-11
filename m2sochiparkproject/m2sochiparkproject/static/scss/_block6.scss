@@ -1,0 +1,38 @@
+.block6 {
+    padding: 3rem 0;
+    @media (min-width: 768px) {
+        padding: 6rem 0;
+    }
+    h2 {
+        padding: 2rem 0;
+        margin: 0;
+        text-transform: none;
+    }
+    .genplan-building {
+        path {
+            cursor: pointer;
+        }
+        &:hover {
+            .contur {
+                fill: transparent;
+            }
+            .pin-el {
+                fill: orange;
+            }
+
+        }
+    }
+
+    .container-genplan {
+        position: relative;
+        overflow-x: auto;
+        img {
+            width: 1240px;
+            max-width: 1240px;
+        }
+        svg {
+            width: 1400px;
+            max-width: 1240px;
+        }
+    }
+}

@@ -1,0 +1,13 @@
+{% extends 'layout.html' %}
+{% load static model_extras data_extras  %}
+{% load wagtailimages_tags wagtailcore_tags %}
+{% block title %} | {{error_code}} {% endblock title %}
+
+{% block content %}
+<div class="uk-container" style="padding-top: 120px;">
+    <h1 style="font-size: 8vw;">Ошибка {{error_code}}</h1>
+    <p>{{error_text}}</p>
+    <p>{{error_description}}</p>
+    <a href="{% url 'index' %}" class="btn btn-primary" style="max-width: 300px;">Вернуться на главную</a>
+</div>
+{% endblock content %}

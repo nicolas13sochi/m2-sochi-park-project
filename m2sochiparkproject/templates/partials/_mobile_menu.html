@@ -1,0 +1,31 @@
+{% load static model_extras data_extras %}
+{% load wagtailimages_tags wagtailcore_tags %}
+{% load widget_tweaks %}
+<div id="my-id" uk-offcanvas="overlay: true">
+    <div class="uk-offcanvas-bar mobile-menu">
+
+        <button class="uk-offcanvas-close" type="button" uk-close></button>
+
+        <div class="inner">
+            <h3>Marine <br>Garden Sochi 4*</h3>
+
+            <div class="grid">
+                <div><a href="#plans" uk-scroll>Планировки</a></div>
+                <div><a href="#infrastructure" uk-scroll>Инфраструктура</a></div>
+                <div><a href="#trustManagementBlock" uk-scroll>Доверительное<br> управление</a></div>
+                <div><a href="#contacts" uk-scroll>Контакты</a></div>
+            </div>
+
+            <div class="foot">
+                <div class="t">Офис продаж на объекте:</div>
+                <div class="text">г. Сочи, Хостинский район, ул. Володарского,6</div>
+                <div class="t">Режим работы:</div>
+                <div class="text">Пн-Пт: с 9:00 до 18:00 Сб: с 10:00 до 17:00 Вс: с 10:00 до 16:00</div>
+                <div class="phone">
+                    <a :tel="88005445566">8 800 544 55 66</a>
+                </div>
+            </div>                    
+        </div>
+
+    </div>
+</div>

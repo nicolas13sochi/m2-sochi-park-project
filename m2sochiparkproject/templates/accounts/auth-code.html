@@ -1,0 +1,41 @@
+{% extends 'layout.html' %}
+{% load static model_extras data_extras  %}
+{% load wagtailimages_tags wagtailcore_tags %}
+{% load widget_tweaks %}
+{% block title %} | Авторизация код {% endblock title %}
+
+{% block content %}
+<div class="uk-container">
+<h1>Sign-in Code</h1>
+<progress class="uk-progress" value="100" max="100"></progress>
+
+    <form method="POST" action="{% url 'login' %}" class="">
+        {% csrf_token %}
+        {{ wizard.management_form }}
+        <div class="uk-margin">
+          {% for field in form %}
+              {% render_field field class="uk-input" placeholder="Code" id=label_id %}
+              {% if field.errors %}
+              <div class="error-text">{{ field.errors }}</div>
+              {% endif %}
+              {% if field.help_text %}
+              <small class="form-text text-muted">{{ field.help_text }}</small>
+              {% endif %}
+          {% endfor %}
+        </div>
+
+        <button class="uk-button uk-button-primary">Подтвердить</button>
+
+        <div class="uk-margin" id="resend-auth-code">
+        {% include 'accounts/partials/_resend-auth-code.html' %}
+        </div>
+
+        <div class="uk-margin">
+          Если он не приходит, возможно у вас еще нет личного кабинета? <br><br>Нужна помощь? Наши <a href="#" target="_blank" style="color: black;">помощники</a> на связи.
+        </div>
+        <div class="uk-margin">
+          <a href="{% url 'register' %}" class="uk-button uk-button-default">Зарегистрироваться</a>
+        </div>
+      </form>
+</div>
+{% endblock content %}

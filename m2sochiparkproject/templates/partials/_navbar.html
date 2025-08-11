@@ -1,0 +1,27 @@
+{% load static model_extras data_extras %}
+{% load wagtailimages_tags wagtailcore_tags %}
+{% load widget_tweaks %}
+ <header class="header" uk-sticky="cls-active: sticky;">
+      <div class="w-container base-container">
+          <div class="grid">
+              <div class="logo">
+                  <a href="">
+                      <img src="{% static 'img/sp/logo.svg' %}" alt="">
+                  </a>
+              </div>
+              <div class="links">
+                  <div><a href="#plans" uk-scroll>Планировки</a></div>
+                  <div><a href="#infrastructure" uk-scroll>Инфраструктура</a></div>
+                  <div><a href="#contacts" uk-scroll>Контакты</a></div>
+              </div>
+              <div class="phone">
+                  <a href="tel:+79186106070">8 (918) 6106070</a>
+              </div>
+              <a class="hide-on-desktop menu-hamburger" href="#my-id" uk-toggle>
+                  <span uk-icon="menu"></span>
+              </a>
+          </div>
+      </div>
+    </header>
+
+

@@ -1,0 +1,155 @@
+{% load static model_extras data_extras %}
+{% load wagtailimages_tags wagtailcore_tags %}
+{% load widget_tweaks %}
+ 
+
+    <!-- This is the modal -->
+    <div id="getCatalog" uk-modal>
+        <div class="uk-modal-dialog uk-modal-body modal-type-2">
+            <button class="uk-modal-close-inside" type="button" uk-close></button>
+            <div class="">
+                <form action="{% url 'create_lead' %}" method="POST" class="s-form">
+                    {% csrf_token %}
+                    <input name="block_id" type="text" value="catalogHero"  hidden/>
+                    <input name="form_name" type="text" value="Получить каталог"  hidden/>
+                    <h2 class="uk-modal-title mb-3">Остались вопросы?</h2>
+                    <p class="subtext">Оставьте заявку. Наш специалист свяжется с вами в ближайшее время.</p>
+                    <div class="fields">
+                        <div class="">
+                            <div class="field-label">Вас зовут?</div>
+                            <div class="uk-inline">
+                                <span class="uk-form-icon" uk-icon="icon: user"></span>
+                                <input name="first_name" class="uk-input" type="text"  placeholder="Вас зовут" required>
+                            </div>
+                        </div>
+                        <div class="">
+                            <div class="field-label">Ваш телефон:</div>
+                            <div class="uk-inline">
+                                <span class="uk-form-icon" uk-icon="icon: receiver"></span>
+                                <input name="phone" class="uk-input phone-mask" type="text" aria-label="Not clickable icon" autocomplete="off" placeholder="+7 (999) 999-99-99" required>
+                            </div>
+                        </div>
+                        <div>
+                            <button class="btn btn-primary">Отправить</button>
+                        </div>
+                    </div>
+                    <div class="policy">Нажимая кнопку “оставить заявку” вы соглашаетесь с политикой конфиденциальности</div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div id="getAparmentPlan" uk-modal>
+        <div class="uk-modal-dialog uk-modal-body modal-type-2">
+            <button class="uk-modal-close-inside" type="button" uk-close></button>
+            <div class="">
+                <form action="{% url 'create_lead' %}" method="POST" class="s-form">
+                    {% csrf_token %}
+                    <input name="block_id" type="text" value="" hidden/>
+                    <input name="form_name" type="text" value="" hidden/>
+                    <h2 class="uk-modal-title mb-3">Заявка на покупку<br> <span class="uk-modal-title-data"></span></h2>
+                    <p class="subtext">Заполните форму и мы вышлем вам каталог с нашими объектами.</p>
+                    <div class="fields">
+                        <div class="">
+                            <div class="field-label">Вас зовут?</div>
+                            <div class="uk-inline">
+                                <span class="uk-form-icon" uk-icon="icon: user"></span>
+                                <input name="first_name" class="uk-input" type="text"  placeholder="Вас зовут" required>
+                            </div>
+                        </div>
+                        <div class="">
+                            <div class="field-label">Ваш телефон:</div>
+                            <div class="uk-inline">
+                                <span class="uk-form-icon" uk-icon="icon: receiver"></span>
+                                <input name="phone" class="uk-input phone-mask" type="text" aria-label="Not clickable icon" autocomplete="off" placeholder="+7 (999) 999-99-99" required>
+                            </div>
+                        </div>
+                        <div>
+                            <button class="btn btn-primary">Отправить</button>
+                        </div>
+                    </div>
+                    <div class="policy">Нажимая кнопку “оставить заявку” вы соглашаетесь с политикой конфиденциальности</div>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <div id="trustManagement" uk-modal>
+        <div class="uk-modal-dialog uk-modal-body modal-type-2">
+            <button class="uk-modal-close-inside" type="button" uk-close></button>
+            <div class="">
+                <form action="{% url 'create_lead' %}" method="POST" class="s-form">
+                    {% csrf_token %}
+                    <input name="block_id" type="text" value="trustManagementBlock" hidden/>
+                    <input name="form_name" type="text" value="Доверительное управление" hidden/>
+                    <h2 class="uk-modal-title mb-3">Остались вопросы?</h2>
+                    <p class="subtext">Оставьте заявку. Наш специалист свяжется с вами в ближайшее время.</p>
+                    <div class="fields">
+                        <div class="">
+                            <div class="field-label">Вас зовут?</div>
+                            <div class="uk-inline">
+                                <span class="uk-form-icon" uk-icon="icon: user"></span>
+                                <input name="first_name" class="uk-input" type="text"  placeholder="Вас зовут" required>
+                            </div>
+                        </div>
+                        <div class="">
+                            <div class="field-label">Ваш телефон:</div>
+                            <div class="uk-inline">
+                                <span class="uk-form-icon" uk-icon="icon: receiver"></span>
+                                <input name="phone" class="uk-input phone-mask" type="text" aria-label="Not clickable icon" autocomplete="off" placeholder="+7 (999) 999-99-99" required>
+                            </div>
+                        </div>
+                        <div>
+                            <button class="btn btn-primary">Отправить</button>
+                        </div>
+                    </div>
+                    <div class="policy">Нажимая кнопку “оставить заявку” вы соглашаетесь с политикой конфиденциальности</div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div id="downloadDocuments" uk-modal>
+        <div class="uk-modal-dialog uk-modal-body modal-type-2">
+            <button class="uk-modal-close-inside" type="button" uk-close></button>
+            <div class="">
+                <form action="{% url 'create_lead' %}" method="POST" class="s-form">
+                    {% csrf_token %}
+                    <input name="block_id" type="text" value="downloadDocumentsBlock" hidden/>
+                    <input name="form_name" type="text" value="Скачать документы" hidden/>
+                    <h2 class="uk-modal-title mb-3">Остались вопросы?</h2>
+                    <p class="subtext">Оставьте заявку. Наш специалист свяжется с вами в ближайшее время.</p>
+                    <div class="fields">
+                        <div class="">
+                            <div class="field-label">Вас зовут?</div>
+                            <div class="uk-inline">
+                                <span class="uk-form-icon" uk-icon="icon: user"></span>
+                                <input name="first_name" class="uk-input" type="text"  placeholder="Вас зовут" required>
+                            </div>
+                        </div>
+                        <div class="">
+                            <div class="field-label">Ваш телефон:</div>
+                            <div class="uk-inline">
+                                <span class="uk-form-icon" uk-icon="icon: receiver"></span>
+                                <input name="phone" class="uk-input phone-mask" type="text" aria-label="Not clickable icon" autocomplete="off" placeholder="+7 (999) 999-99-99" required>
+                            </div>
+                        </div>
+                        <div>
+                            <button class="btn btn-primary">Отправить</button>
+                        </div>
+                    </div>
+                    <div class="policy">Нажимая кнопку “оставить заявку” вы соглашаетесь с политикой конфиденциальности</div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="modal-video" uk-modal>
+        <div class="uk-modal-dialog uk-modal-body modal-type-1">
+            <button class="uk-modal-close-inside" type="button" uk-close></button>
+            <div class="video-wr">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/JSJtVozUuJ0?si=5a3SS_mBPG9OpmGy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>

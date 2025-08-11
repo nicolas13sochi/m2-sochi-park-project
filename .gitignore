@@ -1,0 +1,26 @@
+# .gitignore
+### Django ###
+*.log
+*.pot
+*.pyc
+__pycache__/
+local_settings.py
+/m2sochiparkproject/media/*
+/m2sochiparkproject/static/*
+/env
+/venv
+.DS_Store
+.vscode
+*.pid
+*.db
+*.rdb
+json_dumps.json
+db.sqlite3
+.env
+/m2sochiparkproject/media/
+/m2sochiparkproject/static
+/m2sochiparkproject/logs
+celerybeat-schedule
+*.sqlite3
+example.pdf
+*.idea

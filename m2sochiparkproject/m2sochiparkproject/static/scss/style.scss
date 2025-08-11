@@ -1,0 +1,75 @@
+$textColor: #fff;
+$primaryColor: #82b64c;;
+$textColorDark: #000;
+$textColorDarkGrey: #535353;
+$colorDarkGray: #494e57;
+
+
+
+@import '_typogrpahy.scss';
+@import '_main.scss';
+@import '_btn.scss';
+@import '_hero.scss';
+@import '_header.scss';
+
+
+@import '_block1.scss';
+@import '_block2.scss';
+@import '_block3.scss';
+@import '_block4.scss';
+@import '_block5.scss';
+@import '_block6.scss';
+@import '_block7.scss';
+@import '_block8.scss';
+@import '_block9.scss';
+@import '_block10.scss';
+@import '_block11.scss';
+@import '_block12.scss';
+@import '_block13.scss';
+@import '_block14.scss';
+@import '_block15.scss';
+@import '_block16.scss';
+@import '_block17.scss';
+
+
+.video-wr {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* Соотношение 16:9 */
+  height: 0;
+  overflow: hidden;
+}
+
+.video-wr iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+
+.zoom-controls {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 99999;
+    display: flex;
+    gap: 10px;
+}
+.zoom-btn {
+    background: rgba(255,255,255,0.3);
+    backdrop-filter: blur(4px);
+    border: none;
+    padding: 10px 15px;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    color: white;
+}
+.uk-lightbox-items img {
+    transition: transform 0.2s ease;
+    cursor: grab;
+}

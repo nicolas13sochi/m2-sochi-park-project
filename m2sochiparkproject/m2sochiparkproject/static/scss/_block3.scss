@@ -1,0 +1,67 @@
+.block3 {
+    padding: 3rem 0;
+
+    @media (min-width: 768px) {
+        padding: 6rem 0;
+    }
+    h2 {
+        padding: 2rem 0;
+        margin: 0;
+        text-transform: none;
+    }
+
+    .block-text {
+        font-size: 1.5rem;
+        font-weight: 300;
+        margin: 0;
+        padding-bottom: 8rem;
+    }
+
+    .uk-card {
+        background: #fff;
+        cursor: pointer;
+        overflow: hidden;
+        border-radius: 12px;
+        border: 2px solid rgb(242, 242, 243);
+
+        .card-body {
+            padding: 1rem;
+            background-color: rgb(242, 242, 243);
+        }
+        .uk-card-title {
+            font-size: 1.2rem;
+        }
+        p {
+            font-size: 1rem;
+        }
+        .btns {
+            padding-top: 20px;
+        }
+        .btn {
+            cursor: pointer;
+            height: 40px;
+            border-radius: 5px;
+            width: 100%;
+        }
+        .img-main {
+            display: block;
+        }
+    }
+    .slider-nav {
+        padding: 1rem 0 0;
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        a {
+            border: 1px solid $primaryColor;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            color: $primaryColor;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+    }
+}

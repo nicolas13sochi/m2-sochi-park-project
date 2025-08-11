@@ -1,0 +1,43 @@
+h2 {
+    // color: $textColorDark;
+    letter-spacing: -2px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 2rem;
+    font-weight: 900;
+    line-height: 1em;
+    @media (min-width: 1280px) {
+        font-size: 2.6rem;
+    }
+}
+
+h3 {
+    color: black;
+    letter-spacing: -1.44px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 32px;
+    font-weight: 900;
+    line-height: 1em;
+    @media (min-width: 993px) {
+        font-size: 36px;
+    }
+}
+
+h4 {
+    // color: $textColorDark;
+    letter-spacing: -.8px;
+    text-transform: uppercase;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1em;
+}
+
+p {
+    // color: $textColorDarkGrey;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    line-height: 1.6em;
+}

@@ -1,0 +1,65 @@
+.block11 {
+    background: #eee;
+
+    .grid {
+        padding: 1rem 0 3rem;
+        display: grid;
+        grid-gap: 2rem;
+        border-radius: 20px;
+        @media (min-width: 768px) {
+            padding: 3rem 2rem 6rem;
+            grid-template-columns: 1.3fr 1fr;
+            grid-gap: 6rem;
+        }
+    }
+    .title {
+        padding-bottom: 1rem;
+        font-size: 1.2rem;
+        @media (min-width: 768px) {
+            font-size: 2rem;
+        }
+    }
+    .text {
+        font-size: 1rem;
+        margin: 0;
+        opacity: .6;
+        @media (min-width: 768px) {
+            font-size: 1.4rem;
+        }
+    }
+    .location {
+        padding-top: 2rem;
+        .t {
+            opacity: .6;
+        }
+        .adress {
+            font-size: 1.3rem;
+        }
+    }
+    .btns {
+        display: grid;
+        grid-gap: 1rem;
+        padding-top: 2rem;
+
+        @media (min-width: 768px) {
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 30px;
+            padding-top: 3rem;
+        }
+        a {
+            color: #000;
+            text-decoration: none;
+        }
+    }
+
+    .right {
+        .s-form {
+            padding-top: 0;
+        }
+        .fields {
+            display: grid;
+            gap: 2rem;
+        }
+    }
+}
+

@@ -1,0 +1,122 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 4;
+
+    &.sticky {
+        background: #fff;
+    }
+
+    .grid {
+        padding: 1rem 0 1rem;
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        align-items: center;
+        justify-items: end;
+
+        @media (min-width: 768px) {
+            padding: 1rem 2rem 1rem;
+        }
+        @media (min-width: 993px) {
+            grid-gap: 5rem;
+        }
+    }
+    .links {
+        display: none;
+
+        @media (min-width: 993px) {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+
+        a {
+            color: #141414;
+        }
+    }
+    .phone {
+        transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+        display: none;
+        @media (min-width: 993px) {
+            display: block;
+        }
+
+        a {
+            color: #141414;
+            font-weight: 500;
+            border-width: 2px;
+            border-radius: 15px;
+            border-color: #82b64c;
+            border-style: solid;
+            text-decoration: none;
+            &:hover {
+                background: $primaryColor;
+            }
+
+            @media (min-width: 993px) {
+                // font-size: 1.5rem;
+                padding: .6rem 3rem;
+                display: inline-block;
+                color: #000;
+            }
+        }
+    }
+    .menu-hamburger {
+        font-size: 3rem;
+        .uk-icon {
+            transform: scale(1.5);
+            color: #141414;
+        }
+    }
+}
+
+.hide-on-mobile {
+    @media (min-width: 993px) {
+        display: none;
+    }
+}
+
+.hide-on-desktop {
+    @media (min-width: 993px) {
+        display: none;
+    }
+}
+
+.mobile-menu {
+    background: #141414;
+    .inner {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+    .grid {
+        display: grid;
+        gap: 1rem;
+        padding-top: 2rem;
+    }
+    h3 {
+        font-size: 1.4rem;
+        padding-top: 1rem;
+    }
+    .phone {
+        margin-top: 2rem;
+        font-weight: 700;
+        font-size: 1.2rem;
+    }
+    .foot {
+        margin-top: auto;
+    }
+    .t {
+        font-size: .8rem;
+        font-weight: 700;
+        color: #fff;
+        margin-top: 1rem;
+    }
+    .text {
+        font-size: .8rem;
+        color: #fff;
+    }
+}

@@ -1,0 +1,33 @@
+.about-wrapper {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 1fr;
+
+     @media (min-width: 768px)  {
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 30px;
+    }
+    @media (min-width: 1280px)  {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+.about-item-wrap {
+    background-color: white;
+    border-radius: 20px;
+    padding: 30px;
+    position: relative;
+
+
+    .hover-bg-item {
+        transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+        transform-style: preserve-3d;
+        z-index: -1;
+        background-color: $primaryColor;
+        border-radius: 20px;
+        position: absolute;
+        inset: 0%;
+        
+    }
+ 
+}

@@ -1,0 +1,21 @@
+.location {
+    &-grid {
+        display: grid;
+        grid-gap: 20px;
+        @media (min-width: 993px) {
+     
+            grid-template-columns: 1fr 1fr;
+        }
+        .text {
+
+        }
+        .map-block {
+
+        }
+    }
+}
+
+
+iframe {
+  width: 100%;
+}
