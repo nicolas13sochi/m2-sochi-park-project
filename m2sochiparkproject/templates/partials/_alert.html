@@ -1,0 +1,12 @@
+{% load static model_extras data_extras %}
+{% load wagtailimages_tags wagtailcore_tags %}
+{% if messages %}
+<div style="z-index: 99999; top: 80px; right: 0; position: fixed;">
+    {% for message in messages %}
+    <div {% if message.tags %} class="uk-alert-{{message.tags}}"{% endif %}  uk-alert>
+        <a href class="uk-alert-close" uk-close></a>
+        <p>{{message}}</p>
+    </div>
+    {% endfor%}
+</div>
+{% endif %}

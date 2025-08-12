@@ -207,7 +207,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # Messages
 
 MESSAGE_TAGS = {
-    20: 'info',
+    20: 'primary',
     25: 'success',
     30: 'warning',
     40: 'danger',
