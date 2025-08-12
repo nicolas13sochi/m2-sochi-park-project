@@ -17,7 +17,7 @@
     <!-- ===============================================-->
     <!--    Document Title-->
     <!-- ===============================================-->
-    <title>Marine Garden Sochi{% block title %} {% endblock title %}</title>
+    <title>Сочи Парк{% block title %} {% endblock title %}</title>
 
     <!-- ===============================================-->
     <!--    Favicons-->
@@ -49,6 +49,7 @@
     <!-- ===============================================-->
     {% include 'partials/_navbar.html' %}
         <div class="main-cont">
+          {% include 'partials/_alert.html' %}
           {% block content %} {% endblock content %}
         </div>
     {% include 'partials/_footer.html' %}

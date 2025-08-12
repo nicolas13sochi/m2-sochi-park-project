@@ -5,6 +5,7 @@ from django.views.generic import TemplateView
 from pages.forms import LeadForm
 from django.views.decorators.http import require_http_methods
 from base.handlers import post_lead
+from django.contrib import messages
 
 # Create your views here.
 def index(request):
@@ -48,7 +49,13 @@ def create_lead(request):
         try:
             send_status = post_lead(data=data)
         except:
-            pass
+            messages.error(request, 'Произошла ошибка! Попробуйте снова.')
+        if send_status == 201:
+            messages.success(request, 'Ваша заявка успешно принята! Мы скоро свяжемся с вами.')
+        elif send_status == 400:
+            messages.warning(request, 'Произошла ошибка! Попробуйте снова.')
+        else:
+            messages.error(request, 'Произошла ошибка! Попробуйте снова.')
     return redirect('/')
 
 def error_400(request, exception):
